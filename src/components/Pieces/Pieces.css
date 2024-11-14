@@ -1,8 +1,7 @@
 .pieces {
     position: absolute;
-    left: 0;
+    left: calc(.25*var(--tile-size));
     right: 0;
     top: 0;
-    bottom: 0;
-    background-color: rgba(200, 0, 0, .5);
+    bottom: calc(.25*var(--tile-size));
 }
