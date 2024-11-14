@@ -20,7 +20,7 @@ const Pieces = () => {
                         rank={rank}
                         file={file}
                         piece={position[rank][file]}
-                    >
+                    />
                 :   null
         ))}
 
