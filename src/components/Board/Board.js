@@ -1,5 +1,18 @@
 import './Board.css'
 
-const Board = () => 'Board'
+const Board = () => {
+
+    const 
+
+    return <div className='board'>
+
+        <div className='tiles'>
+            Tiles 
+        </div>
+
+
+    </div>
+
+}
 
 export default Board
