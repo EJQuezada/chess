@@ -1,6 +1,9 @@
 @import './constants.css';
 
 .App {
-  text-align: center;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background: var(--bg-color);
 }
 
