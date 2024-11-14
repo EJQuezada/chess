@@ -1,6 +1,6 @@
 .files {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     color: var(--dark-tile);
