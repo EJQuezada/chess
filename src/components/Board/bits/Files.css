@@ -4,5 +4,5 @@
     align-items: center;
     justify-content: space-around;
     color: var(--dark-tile);
-    height: 25px;
+    height: calc(.25*var(--tile-size));
 }
