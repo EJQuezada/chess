@@ -12,7 +12,7 @@ const Board = () => {
     }
 
     const ranks = Array(8).fill().map((x,i) => 8-i)
-    const files = Array(8).fill().map((x,i) => getCharacter(i))
+    const files = Array(8).fill().map((x,i) => i+1)
 
     return <div className='board'>
 
