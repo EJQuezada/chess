@@ -1,9 +1,10 @@
+import { getCharacter } from '../../helper'
 import './Board.css'
 
 const Board = () => {
 
     const ranks = Array(8).fill().map((x,i) => 8-i)
-    const files = Array(8).fill().map((x,i) => String.fromCharCode(i + 97))
+    const files = Array(8).fill().map((x,i) => getCharacter(i))
 
     return <div className='board'>
 
