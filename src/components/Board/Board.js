@@ -6,7 +6,7 @@ const Board = () => {
 
     const getClassName = (i,j) => {
         let c = 'tile'
-        c+= (i+j) % 2 === 0 ? ' tile--light' : ' tile--dark'
+        c+= (i+j) % 2 === 0 ? ' tile--dark' : ' tile--light'
         return c
     }
 
@@ -20,7 +20,7 @@ const Board = () => {
         <div className='tiles'>
             {ranks.map((rank,i) =>
                 files.map((file,j) => 
-                    <div key={file+'-'+rank} className={getClassName(i,j)}></div>
+                    <div key={file+'-'+rank} className={getClassName(9-i,j)}></div>
                 )
             )} 
         </div>
