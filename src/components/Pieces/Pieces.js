@@ -12,17 +12,17 @@ const Pieces = () => {
     return <div
         className='pieces'
         >
-        {position.map((r,rank) => 
+        {position.map((r,rank) =>
             r.map((f,file) =>
                 position[rank][file]
                 ?   <Piece
-                        key={rank+'-'+file}                        }
+                        key={rank+'-'+file}
                         rank={rank}
                         file={file}
                         piece={position[rank][file]}
                     />
                 :   null
-        ))}
+            ))}
 
         </div>
 }
