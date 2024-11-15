@@ -1,25 +1,24 @@
 import './Pieces.css'
 import Piece from './Piece'
 import { useState } from 'react'
+import { createPosition } from '../../helper'
 
 const Pieces = () => {
     
     const [state,setState] = useState(createPosition())
 
     
-    console.log(position);
 
     return <div
-        className='pieces'
-        >
-        {position.map((r,rank) =>
+        className='pieces'>
+        {state.map((r,rank) =>
             r.map((f,file) =>
-                position[rank][file]
+                state[rank][file]
                 ?   <Piece
                         key={rank+'-'+file}
-                        rank={rank}
-                        file={file}
-                        piece={position[rank][file]}
+                        rank = {rank}
+                        file = {file}
+                        piece = {state[rank][file]}
                     />
                 :   null
             ))}
