@@ -10,6 +10,7 @@
     width: 12.5%;
     height: 12.5%;
     position: absolute;
+    background-size: 100%;
 }
 
-.piece.br {background-image: url('../../../assets/br.png');}
+.piece.br {background-image: url('../../assets/br.png');}
