@@ -8,9 +8,10 @@ const Pieces = () => {
     const [state,setState] = useState(createPosition())
 
     const onDrop = e => {
-        console.log(e.dataTransfer.getData('text'));
+        const [p,rank,file] = e.dataTransfer.getData('text').split(',')
+        console.log(p,rank,file)
     }
-    
+
     const onDragOver = e => e.preventDefault()
     
     
