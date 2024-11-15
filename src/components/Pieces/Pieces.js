@@ -6,8 +6,7 @@ const Pieces = () => {
     
     position[0][0] = 'wr'
     position[0][7] = 'wr'
-    position[0][0] = 'wq'
-    position[0][0] = 'wb'
+    position[7][0] = 'br'
     position[7][7] = 'br'
 
     console.log(position);
