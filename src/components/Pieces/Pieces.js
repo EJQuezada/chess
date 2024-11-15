@@ -10,9 +10,12 @@ const Pieces = () => {
     const onDrop = e => {
         console.log(e.dataTransfer.getData('text'));
     }
+    const onDragOver = e => console.log('On drag over');
+    
     
     return <div
         onDrop={onDrop}
+        onDragOver={onDragOver}
         className='pieces'>
         {state.map((r,rank) =>
             r.map((f,file) =>
