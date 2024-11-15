@@ -7,8 +7,6 @@ const Pieces = () => {
     
     const [state,setState] = useState(createPosition())
 
-    
-
     return <div
         className='pieces'>
         {state.map((r,rank) =>
