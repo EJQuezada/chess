@@ -7,7 +7,7 @@ const Piece = ({
 
 
     const onDragStart = e => {
-        console.log(e);
+        e.dataTransfer.setData('text/plain',`${piece},${rank},${file}`)
     }
 
     return (
