@@ -1,10 +1,12 @@
 import './Pieces.css'
 import Piece from './Piece'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { createPosition } from '../../helper'
 
 const Pieces = () => {
     
+    const ref = useRef()
+
     const [state,setState] = useState(createPosition())
 
     const onDrop = e => {
@@ -14,8 +16,8 @@ const Pieces = () => {
 
     const onDragOver = e => e.preventDefault()
     
-    
     return <div
+        ref={ref}
         onDrop={onDrop}
         onDragOver={onDragOver}
         className='pieces'>
