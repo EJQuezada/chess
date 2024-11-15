@@ -10,6 +10,7 @@ const Pieces = () => {
     const onDrop = e => {
         console.log(e.dataTransfer.getData('text'));
     }
+    
     const onDragOver = e => e.preventDefault()
     
     
