@@ -4,10 +4,10 @@ import Piece from './Piece'
 const Pieces = () => {
     const position = new Array(8).fill('').map(x=> new Array(8).fill(''))
     
-    position[0][0] = 'wr'
-    position[0][7] = 'wr'
-    position[7][0] = 'br'
-    position[7][7] = 'br'
+    for (let i = 0; i < 8; i++) {
+        position[1][i] = 'wp'
+
+    }
 
     console.log(position);
 
