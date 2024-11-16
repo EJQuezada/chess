@@ -9,11 +9,19 @@ const Pieces = () => {
 
     const [state,setState] = useState(createPosition())
 
+    const calculateCoords = e => {
+        const {width, left, top} = ref.current.getBoundingClientRect()
+        const size = width / 8
+        const y = Math.floor((e.clientX - left) / size)
+        const x = 7 - Math.floor((e.clientY - top) / size)
+        return {x,y}
+    }
+    
     const onDrop = e => {
-        console.log(e.clientX,e.clientY)
+        const {x,y} = calculateCoords(e)
 
         const [p,rank,file] = e.dataTransfer.getData('text').split(',')
-        console.log(p,rank,file)
+        
     }
 
     const onDragOver = e => e.preventDefault()
