@@ -1,10 +1,20 @@
+import { useReducer } from 'react';
 import './App.css';
 import Board from './components/Board/Board';
 import AppContext from './contexts/Context';
+import { reducer } from './reducer/reducer';
+
 
 function App() {
+  
+  const [appState, dispatch] = useReducer(reducer,{x : 20})
+
+  const providerState = {
+    appState,
+    dispatch
+  }
   return (
-    <AppContext.Provider value={{}} >
+    <AppContext.Provider value={providerState} >
       <div className="App">
         <Board />
       </div>
