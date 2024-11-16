@@ -1,7 +1,7 @@
 import './Pieces.css'
 import Piece from './Piece'
 import { useState, useRef } from 'react'
-import { createPosition } from '../../helper'
+import { createPosition,copyPosition } from '../../helper'
 
 const Pieces = () => {
     
@@ -18,10 +18,15 @@ const Pieces = () => {
     }
     
     const onDrop = e => {
+        const newPosition = copyPosition (state)
         const {x,y} = calculateCoords(e)
 
         const [p,rank,file] = e.dataTransfer.getData('text').split(',')
-        
+
+        newPosition[rank][file] = ''
+        newPosition[x][y] = p
+
+        setState(newPosition)
     }
 
     const onDragOver = e => e.preventDefault()
