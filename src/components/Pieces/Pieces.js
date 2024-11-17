@@ -3,6 +3,7 @@ import Piece from './Piece'
 import { useState, useRef } from 'react'
 import { createPosition,copyPosition } from '../../helper'
 import { useAppContext } from '../../contexts/Context'
+import { makeNewMove } from '../../reducer/actions/move'
 
 const Pieces = () => {
     const ref = useRef()
