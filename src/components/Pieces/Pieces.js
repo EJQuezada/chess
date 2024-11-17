@@ -10,7 +10,7 @@ const Pieces = () => {
 
     const {appState,dispatch} = useAppContext()
 
-    const currentPosition = appState.position
+    const currentPosition = appState.position[appState.position.length-1]
 
     const calculateCoords = e => {
         const {width, left, top} = ref.current.getBoundingClientRect()
